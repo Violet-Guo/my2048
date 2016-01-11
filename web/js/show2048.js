@@ -24,3 +24,7 @@ function showMoveAnimation(fromx, fromy, tox, toy){
         left:getPosLeft(tox, toy)
     }, 200);    //200代表这个动作将在200毫秒内完成
 }
+
+function updateScore(score){
+    $('#score').text(score);
+}
