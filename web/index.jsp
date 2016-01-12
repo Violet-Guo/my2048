@@ -12,6 +12,9 @@
     String basepath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 %>
 <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+
     <link rel="stylesheet" type="text/css" href="<%=basepath%>css/2048.css">
     <script type="text/javascript" src="<%=basepath%>js/jquery.min.js"></script>
     <script type="text/javascript" src="<%=basepath%>js/main2048.js"></script>
@@ -22,6 +25,7 @@
 <body>
     <header>
         <h1>2048</h1>
+        <p>Modified By Violet-Guo</p>
         <a href="javascript:newgame();" id="newgamebutton">New Game</a>
         <p>score:<span id="score">0</span></p>
     </header>
