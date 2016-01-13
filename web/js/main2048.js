@@ -13,6 +13,7 @@ var endy = 0;
 
 $(document).ready(function(){
     prepareForMobile();
+
     newgame();
 });
 
@@ -25,7 +26,7 @@ function prepareForMobile() {
 
     $('#grid-container').css('width', gridContainerWidth - 2 * cellSpace);
     $('#grid-container').css('height', gridContainerWidth - 2 * cellSpace);
-    $('#grid-container').css('padding', cellspace);
+    $('#grid-container').css('padding', cellSpace);
     $('#grid-container').css('border-radius', 0.02 * gridContainerWidth);
 
     $('.grid-cell').css('width', cellSideLength);
@@ -67,6 +68,7 @@ function init() {
 
 function updateBoardView() {
     $(".number-cell").remove();
+
     for (var i = 0; i < 4; i++)
         for (var j = 0; j < 4; j++) {
             $("#grid-container").append('<div class="number-cell" id="number-cell-' + i + '-' + j + '"></div>');
@@ -125,9 +127,7 @@ function generateOneNumber() {
     //随机一个数字
     var randNumber = Math.random() < 0.5 ? 2 : 4;
     board[randx][randy] = randNumber;
-    showNumberWithAnimation(randx, randy, randNumber);
-
-    //在随机位置显示随机数字
+    showNumberWithAnimation(randx, randy, randNumber);     //在随机位置显示随机数字
 
     return true;
 }
