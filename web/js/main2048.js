@@ -35,10 +35,10 @@ function prepareForMobile() {
 }
 
 function newgame() {
-    //³õÊ¼»¯ÆåÅÌ¸ñ
+    //åˆå§‹åŒ–æ£‹ç›˜æ ¼
     init();
 
-    //ÔÚËæ»úÁ½¸ö¸ñ×ÓÖĞ²úÉúÁ½¸öÊı×Ö
+    //åœ¨éšæœºä¸¤ä¸ªæ ¼å­ä¸­äº§ç”Ÿä¸¤ä¸ªæ•°å­—
     generateOneNumber();
     generateOneNumber();
 }
@@ -98,7 +98,7 @@ function generateOneNumber() {
     if (nospace(board))
         return false;
 
-    //Ëæ»úÒ»¸öÎ»ÖÃ
+    //éšæœºä¸€ä¸ªä½ç½®
     var randx = parseInt(Math.floor(Math.random() * 4));
     var randy = parseInt(Math.floor(Math.random() * 4));
 
@@ -124,10 +124,10 @@ function generateOneNumber() {
         }
     }
 
-    //Ëæ»úÒ»¸öÊı×Ö
+    //éšæœºä¸€ä¸ªæ•°å­—
     var randNumber = Math.random() < 0.5 ? 2 : 4;
     board[randx][randy] = randNumber;
-    showNumberWithAnimation(randx, randy, randNumber);     //ÔÚËæ»úÎ»ÖÃÏÔÊ¾Ëæ»úÊı×Ö
+    showNumberWithAnimation(randx, randy, randNumber);     //åœ¨éšæœºä½ç½®æ˜¾ç¤ºéšæœºæ•°å­—
 
     return true;
 }
@@ -136,28 +136,28 @@ $(document).keydown(function (event) {
 
     switch (event.keyCode) {
         case 37: //left
-            event.preventDefault();    //×èµ²¼üÅÌ°´¼üÄ¬ÈÏµÄĞ§¹û£¬±ÈÈçÉÏÏÂ¹ö¶¯¹ö¶¯Ìõ
+            event.preventDefault();    //é˜»æŒ¡é”®ç›˜æŒ‰é”®é»˜è®¤çš„æ•ˆæœï¼Œæ¯”å¦‚ä¸Šä¸‹æ»šåŠ¨æ»šåŠ¨æ¡
             if (moveLeft()) {
                 setTimeout("generateOneNumber()", 210);
                 setTimeout("isgameover()", 300);
             }
             break;
         case 38: //up
-            event.preventDefault();    //×èµ²¼üÅÌ°´¼üÄ¬ÈÏµÄĞ§¹û£¬±ÈÈçÉÏÏÂ¹ö¶¯¹ö¶¯Ìõ
+            event.preventDefault();    //é˜»æŒ¡é”®ç›˜æŒ‰é”®é»˜è®¤çš„æ•ˆæœï¼Œæ¯”å¦‚ä¸Šä¸‹æ»šåŠ¨æ»šåŠ¨æ¡
             if (moveUp()) {
                 setTimeout("generateOneNumber()", 210);
                 setTimeout("isgameover()", 300);
             }
             break;
         case 39: //right
-            event.preventDefault();    //×èµ²¼üÅÌ°´¼üÄ¬ÈÏµÄĞ§¹û£¬±ÈÈçÉÏÏÂ¹ö¶¯¹ö¶¯Ìõ
+            event.preventDefault();    //é˜»æŒ¡é”®ç›˜æŒ‰é”®é»˜è®¤çš„æ•ˆæœï¼Œæ¯”å¦‚ä¸Šä¸‹æ»šåŠ¨æ»šåŠ¨æ¡
             if (moveRight()) {
                 setTimeout("generateOneNumber()", 210);
                 setTimeout("isgameover()", 300);
             }
             break;
         case 40: //down
-            event.preventDefault();    //×èµ²¼üÅÌ°´¼üÄ¬ÈÏµÄĞ§¹û£¬±ÈÈçÉÏÏÂ¹ö¶¯¹ö¶¯Ìõ
+            event.preventDefault();    //é˜»æŒ¡é”®ç›˜æŒ‰é”®é»˜è®¤çš„æ•ˆæœï¼Œæ¯”å¦‚ä¸Šä¸‹æ»šåŠ¨æ»šåŠ¨æ¡
             if (moveDown()) {
                 setTimeout("generateOneNumber()", 210);
                 setTimeout("isgameover()", 300);
@@ -180,7 +180,7 @@ document.addEventListener('touchend', function (event) {
     var deltax = endx - startx;
     var deltay = endy - starty;
 
-    if (Math.abs(deltax) < 0.3 * documentWidth && Math.abs(deltay) < 0.3 * documentWidth) {
+    if (Math.abs(deltax) < 0.15 * documentWidth && Math.abs(deltay) < 0.15 * documentWidth) {
         return;
     }
 

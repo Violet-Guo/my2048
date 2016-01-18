@@ -27,7 +27,7 @@
         <h1>2048</h1>
         <p>Modified By Violet-Guo</p>
         <a href="javascript:newgame();" id="newgamebutton">New Game</a>
-        <p>score:<span id="score">0</span></p>
+        <p>score:<span id="score">0</span>&nbsp;&nbsp;&nbsp;rate:<span id="rank">菜鸟</span></p>
     </header>
 
     <div id="grid-container">

@@ -22,9 +22,21 @@ function showMoveAnimation(fromx, fromy, tox, toy){
     numberCell.animate({
         top:getPosTop(tox, toy),
         left:getPosLeft(tox, toy)
-    }, 200);    //200´ú±íÕâ¸ö¶¯×÷½«ÔÚ200ºÁÃëÄÚÍê³É
+    }, 200);    //200ä»£è¡¨è¿™ä¸ªåŠ¨ä½œå°†åœ¨200æ¯«ç§’å†…å®Œæˆ
 }
 
 function updateScore(score){
     $('#score').text(score);
+    if(score >= 100){
+        $('#rank').text("å¼€å‘å·¥ç¨‹å¸ˆ");
+    }
+    else if(score >= 1000){
+        $('#rank').text("å¼€å‘è´Ÿè´£äºº");
+    }
+    else if(score >= 5000){
+        $('#rank').text("é«˜çº§å·¥ç¨‹å¸ˆ");
+    }
+    else if(score >= 10000){
+        $('#rank').text("é¦–å¸­æŠ€æœ¯å®˜");
+    }
 }
